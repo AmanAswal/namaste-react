@@ -1,0 +1,75 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" alt="logo" src="https://img.freepik.com/premium-vector/food-ordering-app-logo-with-points-fork-shapes-center_666184-195.jpg"/>
+      </div>
+      <div className="nav-items">
+         <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+         </ul>
+      </div>
+    </div>
+  )
+}
+
+const RestaurantCard = () => {
+  return (
+    <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
+      <img className="res-logo" src="https://b.zmtcdn.com/data/pictures/chains/0/550/3cf1d442e2777580486d16bfb88990f4_featured_v2.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*" alt="haldiram" />
+      <h3>Haldiram</h3>
+      <h4>Chaat, Chole Bathure</h4>
+      <h4>4.4 stars</h4>
+      <h4>38 minutes</h4>
+    </div>
+  )
+}
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">
+        Search
+      </div>
+      <div className="res-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  )
+}
+
+const AppLayout = () => {
+  return (
+    <div className = "app">
+      <Header />
+      <Body />
+    </div>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
